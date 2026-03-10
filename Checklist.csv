@@ -1,0 +1,505 @@
+Bug area,Sub-area,project(app/web?),Checkpoint,Related issues
+Account,Email address,Web-MDS,"注意多次修改email时的弹窗是否正确
+Check whether the pop-up window is correct when you edit the email multiple times",MDS-3149
+Account,Email,KAK,"检查输入长文字时是否会出现操作卡顿（例如邮箱）
+Check whether inputting long text (e.g., an email address) causes any lag or slow response.",KAK-5072
+Address,Delivery address,Web-MDS,"注意取消的历史订单跳转/切换店铺是否正常
+Pay attention to whether the jump/switching store of the cancelled historical orders is normal",MDS-2908
+Admin,,VHM,"注意一个函数在多个页面调用时，单个页面的修改应该会在其他页面也生效
+Note that when a function is called on multiple pages, changes on a single page should also take effect on other pages",VHM-361
+Admin,dir admin/rom admin,JMA,"注意MCD dir admin和rom admin对编辑店铺开店时间的联动关系
+Note the linkage between MCD dir admin and rom admin in editing store opening hours",MWMOP-4065
+Admin,Versions List,ThePlant website,"注意Versions List页面不同语言环境的数据是否会出现在非对应语言环境里
+Note that data in different locales on the Versions List page will appear in non-corresponding locales.",https://theplant.slack.com/archives/C7FRMTSPN/p1745843630140329?thread_ts=1745461604.089839&cid=C7FRMTSPN
+Admin,,Lacoste,"注意检查在后台修改/删除视频时，后台其他模块以及前台是否同步变化
+Pay attention to checking whether other modules in the background and the foreground change synchronously when modifying or deleting videos in the background","LAX-7513
+LAX-7514"
+Banner,,KAK,"注意banner有多个图片时，打断banner切换后，banner还能否继续切换
+Please verify that the banner continues to rotate properly after an interruption (e.g. swipe or tap), particularly when multiple images are present.",KAK-6836
+Banner,,KAK,"检查admin上传的图片在前台显示是否一致
+Check whether the pictures uploaded by admin are displayed consistently on the front end.",KGM-1405
+Box,,KAK,"在一个下拉抽屉有问题时需要检查在所有类型的下拉抽屉
+When one pull-down drawer has a problem, it's necessary to check all types of pull-down drawers.",KAK-8520
+Campaign,LP title,JMA,"检查不同语言环境下文本内容是否正常显示
+Check whether the text content is displayed normally in different language environments.
+测试要覆盖到所有语言环境：日语、英语、其他语言
+The test should cover all language environments: Japanese, English, other languages",MDX-8718
+Campaign,Lucky Bag,JMA,"尝试多设备同时提交表单模拟压力测试
+Try submitting forms on multiple devices at the same time to simulate stress testing",CNV-1161
+Campaign,SLP,JMA,"注意文字颜色与设计是否一致 
+Pay more attention to if the text color is the same as the design",MDX-8793
+Campaign,Always-on Stamp Card,JMA,"检查Campaign上展示的时间是否为对应时间
+Check whether the time displayed on the Campaign is the corresponding time",MDX-9587
+Campaign,T&C,JMA,"检查「prod环境」两端T&C页面是否能正常展示
+Check whether the T&C pages on both ends of the 「prod」 can be displayed normally",MDX-10233
+Campaign,Lucky Bag,JMA,"确保不能通过距离过远弹窗跳转到非中奖店铺购买lucky bag
+Make sure that you cannot jump to a non-winning store to buy a lucky bag through a pop-up window that is too far away",MDX-10645   
+Campaign,,JMA,"检查campaign登陆后是否跳转到正确的页面
+Check if the page redirects to the correct one after logging in. ",MDX-11085
+Campaign,,JMA,"检查不同尺寸屏幕设备和不同阶段的UI展示是否正常
+Check whether the UI displays of devices with different screen sizes and at different stages are functioning properly.",MDX-11075
+Campaign,,JMA,"感觉设计有缺失时，及时进行核查
+When you sense that there is a deficiency in the design, promptly conduct a verification.",MDX-11472
+Campaign,,JMA,"注意检查UI上对应日期的星期几是否与真实的日期一致
+Please check that the day of the week for the corresponding date on the UI matches the actual date.",MDX-12049
+Campaign,,JMA,"「新功能」注意检查没有网络的情况下点击确认按钮的错误提示是否正确
+「New function」Check whether the error prompt when clicking the confirm button in the absence of a network connection is correct",MDX-11916
+Campaign,,JMA,"注意检查链接跳转后的页面是否合理
+Pay attention to checking whether the page after the link jump is reasonable.",MDX-12016
+Campaign,Wallpaper Download page,JMA,"使用不同系统的设备进行下载壁纸操作
+Use devices with different systems to download wallpapers
+测试要覆盖到所有系统：Andorid10/11/12/13/14；iOS15/16/17/18
+The test should cover all systems: Andorid10/11/12/13/14; iOS15/16/17/18",MDX-8827
+Cancel,,Lacoste,"注意检查Polo类产品能否正常取消订单
+Ensure that Polo-style products can be properly canceled.",LAX-5599
+Cart,popup,Web-MDS,"注意最大购买金额popup文字和设计是否一致
+Pay attention to whether the maximum purchase amount pop-up text and design are consistent",MDX-9931
+Cart,button,KAK,"检查放大手机字体后，app UI是否展示正常
+Check whether the app UI is displayed normally after enlarging the font on the phone",KAK-5652
+Cart,,KAK,"检查登出再登录后，保留购物车内商品
+Verify that cart items persist after user logs out and logs back in.",KAK-5409
+Cart,novelty,Lacoste,"注意赠品库存为负数时，在购物车中应该无法显示
+Note that if the gift inventory is negative, it should not be displayed in the shopping cart",LAX-6401
+Cart,,KAK,"注意设备时间设置应为合规时间
+Please ensure that the device time setting is in compliance with the correct time.",KAK-7569
+Cart,,KAK,"注意切换地区地址后，退出登录，应该清空购物车，不出现价格变化pop-up
+After switching the region and logging out, the shopping cart should be emptied and no price change pop-up should appear.",KAK-8121
+Cart/Order history,novelty,Lacoste,"检查cart中的产品信息在order history/admin中是否展示一致
+Check whether the product information in cart is displayed consistently in the order history/admin.",LAX-6391
+Checkout,,JMA,"注意新系统(iOS26)输入框中连续输入多个相同字符，表现是否正常
+Pay attention to the new system (iOS26) input box to enter multiple identical characters continuously, whether it behaves normally",JMA-3282
+Checkout,Amazon pay payment page,Lacoste,"注意Amazon pay页面point和gift同时使用的情况
+Pay attention to the use of points and gifts on the Amazon pay page at the same time
+注意优惠叠加产生负数的情况
+Be aware of negative numbers when discounts are added together",LAX-4058
+Checkout,Shipping address,Lacoste,"编辑表单时，若必填字段为空，需注意是否阻止提交，并向用户提示相应错误信息。
+When editing a form, if a required field is empty, be careful to prevent submission and prompt the user with a corresponding error message.","LAX-4042
+LAX-4059"
+Checkout,Text Box,JMA,"注意订单备注的文本格式在切换页面前后是否保持一致
+Pay attention to whether the text format of the order notes is consistent before and after switching pages.",JMA-2189
+Checkout,Non-default browser,Lacoste,"当完成一笔订单需要跳转到非默认浏览器时，检查我方支付流程是否顺利进行
+When completing an order and needing to jump to a non-default browser, check whether our payment process is going smoothly",LAX-5294
+Checkout,personal information,Lacoste,"新注册的账号完成订单后，注意账户个人信息的完整性
+After completing the order with a newly registered account, please pay attention to the integrity of the account's personal information",spreadsheets
+Checkout,Payment,Lacoste,"当用新的付款方式结账时，要注意修改使用积分的情况（最高积分-部分积分）
+When check out with new payment, pay more attention to modify the use of points.(Maximum points - partial points)",LAX-4971
+Checkout,Login,Lacoste,"结账时注意新会员是否可以使用优惠券
+Guest check out pay attention to whether new member can use coupon.",LAX-4940
+Checkout,Plastic bag,JMA,"注意检查不同语言环境（JP/EN/Others），文本描述是否和设计一致
+Ensure that the text aligns with the design across different language environments (JP/EN/Others).",JMA-2803
+Checkout,,Lacoste,"注意检查产品库存不足时，是否能添加超过库存的产品数量
+Ensure that when the product is out of stock, the quantity added does not exceed the available stock.",LAX-5774
+Checkout,,Lacoste,"注意同一颜色不同尺寸的产品，库存提示是否正确
+Ensure that the stock notification is correct for products of the same color but different sizes.",LAX-5754
+Checkout,,KAK,"检查cart中的产品信息在checkout中是否一致
+Check if the product information in the cart is consistent with that in the checkout",KAK-4758
+Checkout,Order detail,KAK,"注意选项的默认状态与设计是否一致
+Pay attention to the default state of the option is consistent with the design",KAK-4620
+Checkout,Order detail,KAK,"注意「お届け時に領収書発行」勾选「希望する」时「領収書宛名」是否自动填入
+Notice whether「 領収書宛名」 is automatically entered when 「お届け時に領収書発行」 selects 「希望する」",KAK-2882
+Checkout,Payment,Lacoste,"检查采用PayPay/R pay/Smart pay/Amazon pay支付方式时，是否会出现等待长时间的情况，并且在长时间等待后检查订单是否生成
+Check whether there is a long waiting time when using PayPay/R pay/Smart pay/Amazon pay, and check whether the order is generated after a long waiting time",LAX-6183
+Checkout,Checkout detail,KAK,"检查购物车存在多个商品种类一起下单时，订单详情页滚动条是否丝滑
+Check whether the scroll bar on the order details page is smooth when placing an order for multiple items in the shopping cart",KAK-5651
+Checkout,ID Payment,KAK,"检查使用ID支付时跳转到非系统默认浏览器后是否会返回app
+Check whether the browser will return to the app after jumping to a non-default browser when using ID payment",KAK-4887
+Checkout,Credit Card,KAK,"检查大幅度滑动屏幕是否会造成内容缺失
+Check if extensive scrolling leads to missing content.",KAK-2881
+Checkout,Error popup,KAK,"注意报错弹窗iOS和Android是否一致，文案是否正确
+Pay attention to whether the error pop-up Windows for iOS and Android are consistent and whether the text is correct",KAK-2888
+Checkout,Order completed,KAK,"上传图片或文件时，前后端都要考虑不同类型图像的兼容性.
+Both the front end and the back end need to consider compatibility of different types of images when it comes to uploading pictures or files.",KAK-6880
+Checkout,Delivery time,KAK,"配送时间可以在多个页面修改，注意修改后是否会对其他页面的配送时间产生影响
+Delivery time can be edited from multiple pages. Ensure that changes made on one page do not unintentionally affect the delivery time displayed on others.",KAK-6418
+Checkout,Order detail,KAK,"注意多种产品和各种优惠的计算顺序和计算结果。
+Pay attention to the calculation sequence and results of various products and different offers.","KAK-7361
+KAK-7809"
+Checkout,Credit Card,Lacoste,"注意使用特殊3ds信用卡返回的API是否正确。
+Pay attention to whether the API returned using the special 3ds credit card is correct.",LAX-6903
+Checkout,,Lacoste,"注意其他应用程序（YJAPP/Google Search App/Line App）访问我们的网站，以确保其功能良好（例如下单）
+Pay attention to other applications (YJAPP/Google Search App/Line App) accessing our website to ensure that it functions well (such as placing orders).",LAX-6953
+Checkout,Credit Card,Lacoste,"关注Prod上的信用卡，验证输入错误和正确情况，考虑更多异常场景。
+Pay attention to the credit cards on Prod, verify the input errors and correct situations, and consider more abnormal scenarios.",https://theplant.slack.com/archives/CFT4HTXN2/p1745219526254169
+Checkout,,JMA,"注意guest和登陆用户的展示差异
+Pay attention to the differences in presentation between the guest users and the logged-in users.",MMR-1144
+Checkout,,Web-MDS,"「新功能」注意不同失败情况弹窗显示是否正确
+「New function」Pay attention to whether the pop-up displays for different failure situations are correct.",MDS-3498
+Checkout,3DS,Web-MDS,"注意MDS 预订单的时候，金额不达标(<4000 yen)的时候不应该触发3DS
+Note that when placing an MDS reservation order, the 3DS should not be triggered if the amount does not meet the standard (<4000 yen).",MDS-3531
+Checkout,,JMA,"注意在结帐页面添加产品（如塑料袋、捐赠）后，返回PLP再次下单，是否会影响订单
+Pay more attention to whether it will affect the order after adding products (such as plastic bags, donations) on the checkout page and returning to PLP to place an order again",JMA-3205
+Checkout,,JMA,"注意使用不同支付方式时，Online pay显示金额和实际订单金额是否一致
+When using different payment methods, please note whether the amount displayed by Online Pay is consistent with the actual order amount.",JMA-3194
+Checkout,Order details,KAK,"同时下多个订单时，要注意定制行为是否会影响其他订单
+When placing multiple orders simultaneously, pay attention to whether the customization behavior will affect other orders.",KAK-8109
+Checkout,Payment,JMA,"注意Aupay 在UAT下单时付款金额尾数必须为“0”
+Note that when placing an order on Aupay via UAT, the payment amount must end in ""0"".",JMA-3257
+Checkout,,Web-MDS,"注意检查当只有单张无法使用的信用卡时是否影响正常的下单流程
+Please check whether the normal order process is affected when there is only one unusable credit card",MDS-3523
+Checkout,,JMA,"注意无法单独下单的0元产品，单独下单时是否会出现正确的错误提示
+Pay attention to whether the correct error prompt will appear when placing an order for the 0-yuan products that cannot be ordered separately",JMA-3266
+Checkout,Credit card,AL,"检查付款时信用卡过期，“Continue”按钮是否置灰不可用
+When checking the payment, if the credit card has expired, the ""Continue"" button should turn gray and be unavailable.",MAINT-660
+Checkout,,JMA,"检查切换配送方式时（Take out> Dine in), 是否移除塑料袋
+When checking the switching of delivery methods (Take out > Dine in), please confirm whether the plastic bags have been removed.",MDX-11479
+Checkout,Shipping,Aigle,"检查离开页面再返回是否记录上一次的勾选状态
+Check whether leaving the page and returning recorded the last checked status",LAX-5568
+Checkout detail,,KAK,"检查3DS认证是否会出现等待长时间的情况，并且在长时间等待后检查订单是否生成
+Check whether 3DS authentication will cause a long wait time, and check whether the order is generated after a long wait time.",KAK-5762
+Checkout detail,,KAK,"检查支付方式失败时弹出的提示是否是对应的错误提示
+Check whether the pop-up prompt when the payment method fails is the corresponding error prompt",KAK-5768
+"Checkout/Order history
+/Admin/PDP/PLP",,Lacoste,"注意使用促销/优惠券结账时的价格变化。
+Pay more attention to checkout with promotions/coupons.",LAX-4951 
+CMS admin,novelty,Lacoste,"检查赠品在pending order 取消后，库存是否能正常返回
+Check whether the inventory can be returned normally after the gift is cancelled in the pending order",LAX-6417
+CMS admin,Schedule publish,JMA,"注意admin定时发布功能是否生效
+Pay attention to whether the scheduled publishing function of admin takes effect",MDX-10849
+CMS admin,Login sessions,KAK,"注意移动端或者电脑端点击退出其他所有会话后，另一端是否会同步退出
+Pay attention to whether the other end will exit synchronously after clicking ""Sign out all other sessions"" on the mobile or computer end.",KAK-7797
+CMS admin,,JMA,"注意编辑一个版本的图片是否会对其他版本造成影响。（QOR3目前会对后台产生影响但不影响前台，决定不修改）
+Pay attention to whether editing one version of the picture will affect other versions. (QOR3 currently affects the back-end but not the front-end. It has been decided not to make any modifications.",MMR-1147
+Campaign,,JMA,"注意检查长标题在不同尺寸设备是否显示完整
+Pay attention to checking whether the long titles are displayed completely on devices of different sizes. ",MDX-11370
+Campaign,,JMA,"注意系统字体大小是否会影响按钮显示（如，和标题覆盖，或被挤出屏幕）
+Pay attention to whether the font size of the system affects the display of buttons (for example, whether it overlaps with the title or is pushed out of the screen)",MDX-11417
+Campaign,,JMA,"注意使用自动填入时，是否会影响其他输入框
+Note whether the automatic filling function will affect other input fields when used.",MDX-11382
+Complete order,,Aigle,"检查完成订单后返点数是否正确
+Check if the rebate amount is correct after completing the order",LAX-5575
+Consent,,JMA,"注意在同一设备重复注册，不同的RC配置弹窗是否正确
+Pay attention to whether the pop-up Windows for different RC configurations are correct when registering repeatedly on the same device",JMA-3353
+Coupon,Store list,JMA,"检查在边缘时间（比如24：00）的时间显示和店铺状态
+Check the time display and store status at marginal times (such as 24:00 maybe display 24:00 & 0:00).",JMA-2416
+Coupon,Store list,JMA,"注意多次切换tab/重启app之后cloest tag是否正确显示
+Pay attention to whether the closest tag is correctly displayed after switching tabs multiple times or restarting the app.",JMA-2697
+Coupon,Coupon list,JMA,"注意退出账号重登后已添加的coupon的状态。
+[iOS]维持添加coupon的状态   [Android]无coupon
+Note the status of the added coupon after logging out and log in.
+[iOS] Added coupon [Android] No coupon",JMA-2717
+Coupon,Coupon list,JMA,"使用其他coupon后，检查堆叠coupon的显示是否正确
+Use other coupon, check whether the stacked coupons are displayed correctly",JMA-2806
+Coupon,Coupon list,JMA,"注意daypart变化的时间，以及注意弹窗弹出的位置是否正确
+Pay attention to daypart change and whether the popup position is correct",JMA-2367
+Coupon,Coupon list,JMA,"注意多种coupon混合使用，操作某一个coupon的时候会不会影响其他coupon, 关闭APP重新打开是否正常
+Pay more attention to the combination of regular coupons and special coupons(one-time coupon/campaign coupon). Close the app and re-open whether it is normal",JMA-2362
+Coupon,KODO,JMA,"注意使用KODO的倒数时间显示是否正常（重点关注小屏幕设备）
+Pay attention to whether the countdown time of the coupon is displayed normally(focus on small screen devices)",MDX-8061
+Coupon,,JMA,"注意检查stamp coupon叠加的展示效果
+Ensure that the display effect of stamp coupon stacking is correct.",JMA-2939
+Coupon,Coupon detail,KAK,"注意从coupon页面跳转PDP后再返回coupon页面，Coupon页面的UI是否完好
+Pay attention to whether the UI of the coupon page is intact after jumping to PDP from the coupon page and then returning to the coupon page",KAK-5834
+Coupon,Banner,JMA,"注意coupon tap的banner在不同daypart展示情况正常
+Note that the coupon tap banner is displayed normally on different dayparts.",JMA-3018
+MMR Coupon,,JMA,"注意有coupon的用户登陆时的coupon展示
+Note: The coupons will be displayed for users who have them when they log in.",MMR-976
+MMR Coupon,Coupon list,JMA,"注意切换不同状态的店铺(开店/闭店)，检查展示的coupon是否正确
+Pay attention to switching between stores in different states (open/closed) and check whether the displayed coupons are correct.",MMR-1066
+Coupon,,KAK,"注意首次登录会获得一次的优惠券, 在更换优惠券后，用户是否会重复获得
+Please note that the first login will receive a coupon once. After changing the coupon, will the user receive it again",KAK-8287
+MMR Coupon,,JMA,"将产品添加到coupon bin，通过移动订单按钮下单后返回coupon tab/打开QR code页面然后关闭/关闭再重新打开APP进入同一家商店 等其他离开coupon tab重新返回的操作，注意原先添加的coupon bin是否正常显示
+Add the product to the coupon bin, place an order through the mobile order button and return to the coupon tab/ open the QR code page and then close/close and reopen the APP to enter the same store, and other operations such as leaving the coupon tab and returning. Pay attention to whether the previously added coupon bin is displayed normally",MMR-1401
+Coupon,,JMA,"注意后台设置商店营业时间有跨天的情况时，是否会对Coupon的按钮展示或者使用产生影响
+Note whether setting store opening hours across days in the backend will affect the display or use of the coupon button.",CLR-636
+Coupon,,JMA,"注意检查在没有网络的情况下，coupon页面的展示以及点击“Retry” 是否正常
+When there is no network connection, pay attention to checking whether the coupon page display and the ""Retry"" function work properly.",JMA-3378
+Coupon,Coupon Bin,JMA,"添加coupon后更换商店，检查历史添加coupon是否移除(切换商店后应该只保留KODO)
+After adding a coupon, change the store and check whether the coupon added in the history is removed (Only keep the KODO coupon after changing the store)",JMA-2529
+Coupon,MDS coupon code,JMA,"检查MDS中的coupon code是否能正常使用
+Check whether the coupon code in MDS can be used normally",MDX-8424
+Coupon,Coupon list,JMA,"检查所有coupon是否能正常打开
+Check whether all the coupons can be opened normally",CLR-552
+Coupon,,JMA,"注意店铺内返回上一页面应该返回到店铺列表
+Note Back inside the store the previous page should return to the store list",MDX-8065
+Credit card,,JMA,"检查中断3DS认证，再次添加卡片是否会重复添加或超出最大添加张数
+Check if the 3DS authentication is interrupted and the card is added again to see if it is duplicated or exceeds the maximum number of cards to be added",JMA-2891
+Credit card,,JMA,"检查键盘/弹窗打开时是否遮挡按钮/文字，造成不好的客户体验
+Check whether the keyboard/pop-up window blocks buttons/text when it is open, causing a bad customer experience",JMA-2903
+CS admin,Orders,Lacoste,"当添加新的付款时，要多加注意CS admin 是否显示新的付款方式。
+When adding a new payment, pay attention to whether CS admin displays a new payment method.",LAX-4929 
+MMR Deeplink,,JMA,"注意category页面上未显示的已发布项目：验证deeplink是否正确重定向。
+Note the published items that are not displayed on the category page: Verify whether deeplink is redirected correctly.",MMR-1206
+MMR Deeplink,,JMA,"通过deeplink访问页面时，要确保页面正确加载和显示。
+When accessing a page through deeplink, make sure the page is loaded and displayed correctly.",MMR-1207
+Delivery address list,Pop up,JMA,"检查弹出popup的优先级顺序是否和设计一致
+Check whether the priority order of pop-up is consistent with the design","JMA-3091 
+JMA-3092 "
+Delivery address list,Pop-up,JMA,"注意Pop-up在不同语言环境下的文字是否与设计一致
+Pay attention to whether the text of Pop-up in different language environments is consistent with the design",JMA-3187
+Delivery time,Error popup,KAK,"注意新注册账号会不会对错误提示的复现造成影响
+Pay attention to whether the use of a new account changes how reliably the error message can be triggered.",KAK-6724
+Email,refund email,Lacoste,"检查订单状态发生变化时，是否收到对应邮件
+Check whether you receive corresponding emails when the order status changes: Return/Refund>>receive a returned email","R/Paypay cannot receive return refund email
+https://theplant.slack.com/archives/C01BFU0UH7S/p1700557639298009?thread_ts=1700538376.425669&cid=C01BFU0UH7S"
+Email,,Lacoste,"当添加新的付款时，要多加注意Email 是否显示新的付款方式。
+When adding a new payment, pay attention to whether email displays a new payment method.",LAX-4930 
+Email,,Lacoste,"更加注意保持email中的订单详细信息与cart/shipping/payment/order history保持一致
+Pay more attention to keeping the order details in the email consistent with cart/shipping/payment/order history","LAX-5605
+"
+Email,,KAK,"检查邮件内容是否和设计一致
+Check whether the email content matches the design.",KAK-4885
+Email (Third-party),,Lacoste,"需要检查第三方退款邮件展示金额是否正确
+Check whether the amount displayed in the third-party refund email is correct",LAX-4736
+MMR Exchanged reward details page,,JMA,"注意浏览器打开链接是否能正常跳转到自己选择的默认浏览器中
+Pay attention to whether the browser can jump to the default browser you choose normally when opening the link",MMR-1361
+Favorite,,VHM,"在测试收藏功能的时候，注意确认每个涉及的页面数据同步正确
+When testing the collection function, make sure that the data of each involved page is synchronized correctly",VHM-1874
+Filter,Multiple filters,VHM,"注意同一个页面上筛选器之间的关联性
+Focus on the relevance of filters on the same page.",VHM-253
+Footer,,ThePlant website,"检查页面内所有的链接在pc端和移动端是否能正常工作
+Check whether all links on the page work properly on PC and mobile devices.",https://theplant.slack.com/archives/C7FRMTSPN/p1745844396814689?thread_ts=1745461604.089839&cid=C7FRMTSPN
+Form,Submit button,VHM,"多次点击提交按钮观察接口发送次数
+Click the Submit button multiple times to observe the number of interfaces",VHM-779
+Form,Button,VHM,"注意观察按钮光标效果
+Observe the button cursor effect",VHM-783
+Form,Inquiry Form,VHM,"注意检查在营业时间外内容展示是否正确
+（VHM：营业时间外不展示电话）
+Please check whether the content is displayed correctly outside business hours",VHM-744
+Form,,VHM,"注意检查提交表单后的文字是否同步翻译
+Please check whether the text is translated synchronously after submitting the form",VHM-1591
+Form,,VHM,"检查取消上传照片后，功能是否正常
+Check if the function is working properly after canceling the upload of the photos.",VHM-1693
+MMR Gacha,,JMA,"在弹出弹窗时需要注意其他地方是否还能操作
+When a pop-up window appears, it is necessary to pay attention to whether other areas can still be operated.",MMR-579
+MMR Gacha,,JMA,"注意勾选不再显示之后，弹窗是否还会再出现
+Pay attention to whether the pop-up window will reappear after checking ""Do not show again"".",SHFT-1084
+Gallery,,VHM,"注意切换图片后是否影响附近UI(例如按钮缺失)
+Pay attention to whether switching pictures affects nearby UI (such as missing buttons)",VHM-823
+Home,Loading Page,JMA,"「新功能」检查版本更新后之前的改动是否还有遗留(特别是加载显示时)
+「New function」Check if there are any remaining changes after the version update (especially when loading the display)",JMA-2731
+Home,,JMA,"注意检查页面滑动是否流畅
+Check whether the page slides smoothly",JMA-2569
+Home,Navigation bar,Aigle,"检查所有浏览器的Navigation bar是否展示正常
+Check if the Navigation bar is displayed properly in all browsers",LAC-2963
+Home,search link,KAK,"检查在CMS中设置的跳转链接，在APP中是否跳转到正确位置，显示是否正常
+Check the jump link set in the CMS to see if it jumps to the correct location in the APP and whether it is displayed normally.",KAK-5414
+Home,Ongoing order,KAK,"注意成功取消订单后取消按钮需要隐藏
+Note that the cancellation button needs to be hidden after a successful order cancellation",KAK-2737
+Home,Banner,JMA,"注意在lucky bag阶段变化后，banner是否能及时变换
+Pay attention to whether the banner can be changed in time after the lucky bag stage changes.",MDX-10634
+Home,Error popup,KAK,"确保同一操作流程能稳定复现错误提示
+Verify that the error prompt appears reliably when following the same sequence of operations.",KAK-6684
+Home,banner,JMA,"检查home的新增banner跳转是否正常
+Check whether the newly added banner jump of home page is normal",https://theplanttokyo.atlassian.net/browse/SHFT-1065?focusedCommentId=418585
+Home,,JMA,"注意同时下mop/mds订单时，从home banner进入order detail是否会产生crash
+Be aware that when placing both the mop and mds orders simultaneously, whether entering the order details from the home banner will cause a crash.",MMR-1012
+Home,,JMA,"注意同时下mop/mds订单时，home banner展示是否正常
+Please check whether the home banner is displayed normally when placing both the mop and mds orders simultaneously.",MMR-1010
+Home,tab switching,KAK,"注意切换tab是否流畅
+Pay attention to whether the tab switching is smooth",KAK-8290
+Image alert,SEO,VHM,"注意不同语言的翻译细节
+Pay attention to the translation in different languages","VHM-770
+VHM-771"
+Instore,Order detail,Lacoste,"注意检查payment method是否正常显示
+Ensure that the payment method is displayed correctly.",LAX-4901 
+Instore,,Lacoste,"「新功能」注意instore-app联合操作的部分 ，订单状态更新是否及时。
+「New function」Pay attention to the part of the instore-app joint operation and check whether the order status is updated in a timely manner.",LAX-6875
+Login,,Web-MDS,"检查长时间不操作，系统自动退出登陆后，确保个人信息UI是否为guest状态
+Check if the personal information UI is in guest state after the system automatically logs out after a long period of inactivity.",MDS-3188
+Login,,JMA,"检查同一个账号在app/web是否都能成功登录
+Check whether the same account can successfully log in on the app/web",MDS-2915
+Login,,JMA,"检查新账号反复登录登出是否成功
+Check whether the new account logs in and out repeatedly successfully",JMA-2581
+Login,MFA,JMA,"注意验证码是否达到发送限制，以及Android和iOS的行为是否一致。
+Pay more attention to verification code reaching the sending limit,  and whether the behavior of Android and iOS is consistent.","JMA-2585
+JMA-2361"
+Login,Facebook/Twitter,JMA,"注意Prod上不同的登录方式是否都能成功登录
+Pay more attention to different login methods on the Prod can be successfully logged in","JMA-2478
+JMA-2487
+JMA-2486
+JMA-2725"
+Login,,KAK,"注意打开webview/popup后登录功能是否还能正常使用。
+Check whether the login function can still be used normally after opening webview/popup.",KAK-7575
+Login,,KAK,"检查在web/app端退会后，在另一端登陆时错误提示是否显示正确
+Check whether the error message displayed when logging in on the other end after logging out on the web/app end is correct.",KGM-1639
+Login,,JMA,"注意检查中断login页面是否会闪退
+Pay attention to checking whether the login interruption page will crash.",MDX-11694
+Login MFA,,JMA,"检查更换邮箱使用错误邮箱并中断验证，流程是否能走通
+Check if the process can proceed successfully after changing to an incorrect email address and interrupting verification.",CNV-1586
+Loyalty,,Qor5,"注意退款之后过期的积分是否会退还
+Pay attention to whether the expired points will be refunded after the refund",QOR5-1841
+Loyalty,,Qor5,"注意检查使用的积分不应该是过期积分
+Make sure to check that the used points are not expired points.",QOR5-1817
+Map,Title,JMA,"注意店名/标题较长时，是否展示完全
+When the store name/title is long, pay attention to whether it will be blocked",JMA-2401
+Map,Area Search ,VHM,"检查所有语言下region map地址跳转是否正确
+Check whether the region map address redirection correct in all languages",VHM-790
+Map,Nearby Map,VHM,"检查地图是否展示正常
+Check whether the map is displayed normally","
+VHM-265"
+Map,,VHM,"注意搜索结果默认展示是否正确
+Pay attention to whether the default display of search results is correct",VHM-742
+Map,favorite icon,JMA,"检查store finder页面店铺地图上favorite icon是否展示正常
+Check whether the favorite icon on the store map on the store finder page is displayed normally",JMA-2164
+Map,favorite icon,JMA,"检查店铺deeplink跳转后favorite icon是否展示正常
+Check whether the favorite icon is displayed normally through the store deeplink",JMA-2204
+Map,favorite icon,JMA,"关注最新购买过的店铺是否正常展示favorite icon
+Check whether the favorite icon is displayed normally in the last used store",JMA-2214
+Map,favorite icon,JMA,"收藏店铺列表页面只展示favorite icon
+The favorite store list page only displays the favorite icon",JMA-2212
+Map,favorite icon,JMA,"「新功能」检查Prod上GPS off 的时候，在Map收藏店铺icon显示是否正常
+「New function」Pay more attention to Prod and much issues areas",JMA-2210
+Map,favorite icon,JMA,"「新功能」检查UAT上好的功能在Prod上是否也是好的，以及注意bug集中的区域
+「New function」Pay more attention to Prod and much issues areas",JMA-2196
+Map,Search,JMA,"「新功能」注意地图的搜索范围
+「New function」Pay more attention to the search area of the map",JMA-2229
+Marketing,Popup,Qor5,"注意检查弹窗的文字显示是否符合使用逻辑
+Pay attention to check whether the text display of the pop-up window conforms to the usage logic",QOR5-1214
+Marketing,Schedule,Qor5,"注意检查截止日期当天是否能收到预定发送的email
+Please check whether you can receive the scheduled email on the deadline.",QOR5-1165
+Menu,Animation text ,JMA,"「新功能」注意更新版本后有没有缺少animation text
+「New function」Note whether there is any missing animation text after updating the version",JMA-2420
+Menu,Customize Products text ,JMA,"检查自定义产品类别title在menu的位置是否正确
+Check whether the custom product category title is in the correct position in the menu","JMA-2469
+JMA-2473"
+MMR Reward details page,,JMA,"注意按钮置灰时的文案展示的优先级
+Pay attention to the priority of the text display when the button is grayed out",MMR-840
+MMR Coupon Tab,,JMA,"注意检查边界时间在不同语言的展示是否正常
+Pay attention to checking whether the display of the boundary time is normal in different languages.",MMR-1483
+MMT,MMT list,KAK,"注意对比app和web端MMT list排序是否一致
+Pay attention to whether the sorting of MMT list on app and web is consistent",KAK-5394
+MOP Coupon Tab,,JMA,"检查中断注册后，Coupon tab不应该展示登录后的样式
+After a registration interruption, the Coupon tab should not display the logged-in style.",MDX-11693
+My page,Address,KAK,"注意检查iOS和Android添加新地址的弹窗是否一致
+Check whether the pop-up for adding a new address is the same on iOS and Android",KAK-2895
+My page,,KAK,"确保退会账号无法在另一部已登录设备完成下单
+Ensure that the cancelled account cannot complete orders on another logged-in device",KAK-2965
+My page,Email,KAK,"检查能否多次成功修改邮箱
+Check whether the email address can be successfully updated multiple times.",KAK-4647
+My page,Address,KAK,"检查修改内容后，是否及时更新了页面
+Check whether the page is updated promptly after the content is modified.
+长时间的加载内容会使用户体验不佳
+Long loading times can lead to a poor user experience.",KAK-4642
+My page,Order history/再び購入,KAK,"检查不同页面点击商品图片能否正常跳转到PDP
+Check whether clicking on product images on different pages can normally redirect to PDP",KAK-2759
+Navigation bar,,KAK,"检查切换页面时导航栏的UI是否正常
+Check whether the navigation bar UI displays correctly when switching pages.",KAK-2894
+Cart/Order confirmation,,JMA,"注意检查多个coupon组合下单时各个页面产品名称是否会缺失
+Check if product names are missing on each page when multiple coupon combinations are placed",JMA-2989
+Order History,Drop-off delivery,JMA,"检查MDS order history的Drop-off delivery状态是否正确
+Check whether the Drop-off delivery status of MDSorder history is correct",JMA-2211
+Order History,Coupon,Lacoste,"注意历史订单页面的结算金额是否扣减优惠券（可通过Gmail价格对比）
+Pay attention to whether the settlement amount on the historical order page is deducted from the coupon",LAX-4936
+Page builder,Schedule publish,ThePlant website,"测试一些定时功能需要注意是否会有时区不一致的问题
+When testing some timing functions, it is necessary to pay attention to whether there will be any inconsistency in time zones.",MAINT-347
+PDP,,JMA,"注意下方banner是否会挡住内容
+Pay attention to whether the bottom drawer affects user usage",JMA-2220
+PDP,Size guide,Aigle,"打开Size guide时Web和mobile都要注意页面是否可以滑动
+When opening Size guide, both Web and mobile should pay attention to whether the page can slide",LAX-5596
+PDP,,KAK,"注意检查前后台商品详情信息是否一致，如果没有商品数据记得找开发提供
+Please check whether the product detail information in the front and back ends is consistent. If there is no product data, remember to ask the development team for it",KAK-3933
+PDP,,KAK,"注意商品Case内的产品数量大于商品总库存量时，不展示case选项
+Note that when the number of products in a case is greater than the total inventory of the product, the case option will not be displayed.",KAK-3972
+PDP,,KAK,"注意折扣信息展示的位置是否合理
+Pay attention to whether the position of the discount information display is reasonable",KAK-2961
+PDP,,JMA,"检查页面文字与文字之间是否对齐
+Check whether the text on the page is aligned",JMA-3129
+PDP,Rating star,KAK,"注意rating star应为固定显示，不可交互
+The rating star should be displayed in a fixed manner and should not be interactive.",KAK-7502
+PDP,,Lacoste,"检查网页横竖屏切换时，页面布局是否正常
+Check whether the page layout is normal when switching between portrait and landscape modes on the web page.",LAX-7190
+PDP,,KAK,"注意可以跳转的点击范围
+Note the clickable range that allows for navigation.",KAK-8150
+MMR Reward details page,,JMA,"注意多次兑换，重复进入detail page时，point显示是否正确
+Please check whether the points are displayed correctly when repeatedly exchanging and entering the detail page multiple times.",MMR-1116
+PDP,login,KAK,"检查匿名用户应先要求登录再进行跳转
+Anonymous users should be requested to log in before redirection",KAK-8217
+PDP,,JMA,"检查可选size的饮料，展示是否正常
+Check the available sizes of the beverages and verify if they are functioning properly",CLR-539
+PDP,Sauce,JMA,"检查特殊商品（15pc鸡块）添加酱料的提示展示是否正常
+Check if the prompt for adding sauce to the special product (15pc chicken nuggets) is displayed correctly.",CF81D0TJ4
+PDP,Video,Lacoste,"注意右键点击显示所有控件的功能是否会影响需求
+Pay attention to whether the function of right-clicking to display all controls will affect the requirements",LAX-7512
+PDP/Cart,,JMA,"注意从推荐产品(新产品)进入PDP时，检查产品信息是否完整
+When entering the PDP from the recommended products (new products), make sure to check if the product information is complete.",JMA-3222
+PLP/PDP,,Lacoste,"检查不同页面同一产品的价格显示是否一致
+Check whether the price display of the same product on different pages is consistent.",LAX-7194
+Pickup,,JMA,"注意检查同时有MDS/MOP订单时，切换查看pickup页面的UI是否正常
+Please pay attention to checking whether the UI on the pickup page functions properly when there are both MDS/MOP orders.",MDX-11721
+PLP,Product price,Aigle,"注意对比PDP/PLP的产品价格是否一致，比如是否含税
+Check whether the product prices on PDP and PLP are consistent, such as whether tax is included.",LAX-5215
+PLP,tag,Aigle,"注意检查popular tag显示是否完整
+Ensure that the popular tag is displayed completely.",LAX-5617
+PLP,Inherit filter,KAK,"检查清空筛选条件后，结果是否正确
+Check whether the results are correct after clearing the filter conditions.",KAK-2747
+PLP,Inherit filter,KAK,"排序功能注意和商品数据对比是否排序正确，如果没有商品数据记得找开发提供
+For the sorting function, pay attention to comparing it with the product data to see if the sorting is correct. If there is no product data, remember to ask the developer for it",KAK-4428
+MMR Reward list page,,JMA,"字体样式会有些细微的差别, 有特定要求时要注意字体是否正确。
+There may be some subtle differences in font styles. When there are specific requirements, pay attention to whether the font is correct.",MMR-1149
+PLP/Checkout,EDT,JMA,"注意不同支付方式的EDT不同，不同页面（PLP/Checkout）的默认支付方式（Cash/online）要一致
+Note that the EDT of different payment methods is different, and the default payment method (Cash/online) should be the same for different pages (PLP/Checkout)","JMA-2594
+JMA-2559
+JMA-2560"
+PLP/PDP,Price,JMA,"注意检查产品价格在PLP/PDP显示是否一致
+Please check whether the product price is consistent in PLP/PDP",MDX-8253
+PLP/PDP,popup,JMA,"注意一次性popup在切换页面（从PDP点击关联套餐跳转）时，是否会多次显示
+Check whether a one-time popup appears multiple times when switching pages (jumping from PDP to a related bundle).",JMA-2824
+PLP/PDP,,KAK,"考虑一些文字内容是否有显示的必要
+Consider whether certain text content is necessary to display.
+比如有整箱购买优惠的文字，实际价格并无优惠，此时可以隐藏该文字
+For example, if a message indicates a bulk purchase discount but no actual discount is applied, it may be better to hide that text.",KAK-4748
+PLP/PDP,,JMA,"注意检查千位分隔符
+Be sure to check the thousands separator",JMA-3126
+MMR Point history detail page,,JMA,"注意系统使用日本日历时APP内日期展示是否正常
+Pay attention to whether the date display in the APP is normal when the system uses the Japanese calendar",MMR-924
+Popup,,JMA,"注意检查错误提示与实际是否相符
+Pay attention to checking whether the error messages match the actual situation.",MDX-11792
+Product,,JMA,"注意切换Tab的时候，页面UI是否会出现异常
+Pay attention to whether the page UI will be abnormal when switching tabs",JMA-3252
+Register,verification code page,KAK,"检查输入验证码的页面，iOS17以上系统自带的自动输入验证码功能是否正常
+Check the page where you enter the verification code. Is the automatic verification code entry function of iOS 17 or above working properly.",KAK-2776
+Register,Location,KAK,"检查关闭手机系统定位服务后，点击定位按钮是否有反应
+Check if there is any response when clicking the positioning button after turning off the mobile system phone positioning service.",KAK-2986
+Register,,KAK,"[WEB]注意浏览器返回会不会对流程是否正确
+[WEB] Note whether the browser's return value affects the correctness of the process.",KGM-1412
+Register,,KAK,"注意检查在页面有其他链接可以跳转的情况下返回后流程是否能够正常进行
+Please check whether the process can proceed normally after returning if there are other links on the page that can redirect.",KGM-1451
+Register,,KAK,"检查切换选项后，是否影响流程
+After checking the switching options, will it affect the process?",KGM-1364
+Roommateinfo-form,,VHM,"检查可以上传的文件类型是否都可以上传成功
+Check whether all uploadable file types can be uploaded successfully",VHM-1640
+Store finder,Store list,JMA,"店铺搜索结果出来前，切换店铺列表检查是否会崩溃
+Before the store search results come out, switch the store list to check if it will crash.",JMA-2378
+Store finder,Selected tab,JMA,"检查Break order之后再取消订单，store finder会不会有异常
+Check cancel the order after breaking order, store finder will not be abnormal",JMA-2692
+Store finder,button,JMA,"注意在store finder界面，长名称店铺的order按钮是否正常
+Pay attention to whether the order button of the store with a long name is normal in the store finder interface",JMA-3186
+Sub links,,VHM,"注意对比PC/mobile应该展示的链接是否展示完全，icon是否展示是完整
+Pay attention to whether the link that should be displayed on PC/mobile is displayed completely and whether the icon is displayed completely",VHM-832
+Sub links,,VHM,"检查搜索后相应子链接是否展示，注意是否有城市名重复展示
+Check whether the corresponding sub-links are displayed after the search, and pay attention to whether there are repeated city names",VHM-864
+Coupon,,JMA,"在倒计时的页面将APP切换到后台，检查倒计时是否正确计时
+Switch the app to the background on the countdown page and check if the countdown is working correctly.",CLR-397
+Wrapping paper,,KAK,"注意检查不同分辨率手机排列布局是否展示正常
+Please check whether the layout of mobile phones with different resolutions is displayed normally.",KAK-4883
+Email,,KAK,"更加注意保持email中的订单详细信息与cart/shipping/payment/order history保持一致
+Pay more attention to keeping the order details in the email consistent with cart/shipping/payment/order history",KAK-4892
+PDP,sauce,JMA,"注意有sauce的产品在每个版本下是否都能正常展示sauce
+Please ensure that products containing ""sauce"" display the sauce correctly across all versions.","MDX-12152
+JMA-3427"
+Coupon,KODO,JMA,"注意检查breakorder之后KODO是否在coupon list中移除
+Please check if KODO has been removed from the coupon list after the breakorder.","CLR-730
+CLR-746"
+PDP,Tag,KAK,"注意检查前台展示的时间是否为JST
+Please check if the time displayed on the front end is JST.",KGM-2251
+Form,,VHM,"在测试表单的时候注意前后表单跳转是否符合流程
+When testing the form, pay attention to whether the form transitions before and after conform to the process","VHM-1929
+VHM-1935"
+Form,,VHM,"注意下载的表格用不同文档阅读器打开是否兼容
+Pay attention to whether the downloaded form is compatible when opened with different document readers",VHM-1936
+MMR Coupon Tab,,JMA,"注意在旧版本兑换完reward之后再升级新版本是否能正常使用
+Please note whether it can be used normally when upgrading to the new version after redeeming the reward in the old version",MMR-1628
+PDP,,VHM,"注意reset之后功能与之前是否一致
+Pay attention to whether the functions after reset are the same as before",VHM-1980
+Cart,,JMA,"注意coupon和set 含有完全相同组合产品加入购物车时是否分开展示
+Pay attention to whether the coupon and set contain exactly the same combination of products and are displayed separately when added to the cart",JMA-3431
+Checkout,,JMA,"注意firebase修改配置后是否会影响前台
+Note whether the configuration modification in Firebase will affect the front-end.",JMA-3439
+Favorite,,KAK,"注意修改内容时，快速刷新页面后修改是否生效
+Note that after quickly refreshing the page, the modifications will take effect.",KGM-1745
+Coupon,,JMA,"注意线下使用的coupon在使用完后，是否从coupon bin移除
+Please note whether the coupons used offline will be removed from the coupon bin after being used up.",CLR-618
+Cart,,KAK,"注意清空Cart后，重新登陆，Cart的稍后购买是否完全清空
+Please note that after clearing the Cart, if you log in again, will the subsequent purchases in the Cart be completely cleared?",KGM-1956
+Register,Address,KAK,"注册账号选择地址时，回退上一步，展示的列表顺序是否一致
+When registering an account and choosing the address, if you click the ""Back"" button, does the displayed list order remain the same?",KGM-1738
