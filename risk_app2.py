@@ -1,108 +1,127 @@
 import streamlit as st
 import pandas as pd
 
-# 设置页面宽度和标题
-st.set_page_config(page_title="AI-Assisted QA Risk Model", layout="wide")
+# 1. 页面配置
+st.set_page_config(page_title="QA 团队风险评估中心", layout="wide", initial_sidebar_state="expanded")
 
-# --- 1. 数据加载 ---
+# 自定义 CSS 让界面更漂亮
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f5f7f9;
+    }
+    .risk-high {
+        padding: 20px;
+        background-color: #ff4b4b;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .risk-medium {
+        padding: 20px;
+        background-color: #ffa500;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .risk-low {
+        padding: 20px;
+        background-color: #00c853;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 @st.cache_data
-def load_and_analyze():
-    # 尝试加载清洗后的数据，否则加载原始数据
-    try:
-        df = pd.read_csv('Checklist_Cleaned.csv')
-    except:
-        df = pd.read_csv('Checklist.csv')
+def load_and_process_data():
+    # 读取数据
+    df = pd.read_csv('Checklist.csv')
+    # 清洗数据
+    df['project(app/web?)'] = df['project(app/web?)'].fillna('Unknown').str.strip()
+    df['Bug area'] = df['Bug area'].fillna('Unknown').str.strip()
     
-    # 填充空值并去除空格
-    df['Bug area'] = df['Bug area'].fillna('General').str.strip()
-    df['project(app/web?)'] = df['project(app/web?)'].fillna('General').str.strip()
+    # 计算项目+业务的历史风险权重
+    df['Project_Area'] = df['project(app/web?)'] + " | " + df['Bug area']
+    pair_counts = df['Project_Area'].value_counts()
+    max_count = pair_counts.max()
+    risk_weights = (pair_counts / max_count).to_dict()
     
-    # AI 预处理：计算全库风险权重
-    area_weights = df['Bug area'].value_counts(normalize=True).to_dict()
-    return df, area_weights
+    return df, risk_weights
 
 try:
-    df, area_weights = load_and_analyze()
+    df, risk_weights = load_and_process_data()
 
-    st.title("🤖 AI-Assisted Bug Risk Prediction Model")
-    st.info(f"Status: Active | Based on {len(df)} Actionable Checkpoints")
+    st.title("🛡️ 智能缺陷预测与风险评估系统")
+    st.caption("驱动数据：183条历史缺陷 ")
+    st.write("")
 
-    # --- 2. 侧边栏交互层 (保持原有反馈逻辑) ---
-    with st.sidebar:
-        st.header("⚙️ Model Inputs")
-        
-        # 项目选择
-        proj_list = sorted(df['project(app/web?)'].unique())
-        proj = st.selectbox("Project", proj_list)
-        
-        # 联动过滤：根据项目选择 Bug Area
-        available_areas = sorted(df[df['project(app/web?)'] == proj]['Bug area'].unique())
-        area = st.selectbox("Bug Area", available_areas)
-        
-        st.markdown("---")
-        scope = st.slider("Change Scope", 1, 10, 5)
-        dev_risk = st.slider("Dev Experience Risk", 1, 10, 5)
-        
-        # AI 反馈闭环 (The Loop)
-        st.markdown("---")
-        st.subheader("🧠 Help AI Learn")
-        feedback = st.sidebar.radio("Was this prediction accurate?", ["Select...", "Yes", "No - Too High", "No - Too Low"])
-        if feedback != "Select...":
-            st.sidebar.success("Feedback recorded! Thanks for helping us improve.")
-
-    # --- 3. AI 预测核心逻辑 ---
-    # 计算基础风险（该模块在全库的故障密度）
-    base_risk = area_weights.get(area, 0.1) * 100
+    # --- 侧边栏 ---
+    st.sidebar.header("📋 录入评估参数")
+    project_list = sorted(df['project(app/web?)'].unique())
+    selected_project = st.sidebar.selectbox("1. 所属项目", project_list)
     
-    # 风险评分公式
-    prediction_score = (base_risk * 0.4) + (scope * 3) + (dev_risk * 3)
+    available_areas = sorted(df[df['project(app/web?)'] == selected_project]['Bug area'].unique())
+    selected_area = st.sidebar.selectbox("2. 业务模块", available_areas)
     
-    # 设定置信度（因为是精准匹配，置信度始终为 High）
-    confidence = "High (Direct Match)"
+    st.sidebar.markdown("---")
+    scope_score = st.sidebar.slider("3. 代码改动规模 (1-10)", 1, 10, 5, help="1:改文案, 5:新功能, 10:底层架构重构")
+    dev_exp = st.sidebar.slider("4. 开发人员风险 (1-10)", 1, 10, 5, help="1:核心老手, 10:刚入职或不熟悉该模块")
 
-    # --- 4. 视觉展示 (你喜欢的醒目高亮样式) ---
-    if prediction_score > 70:
-        st.markdown(f'''
-            <div style="background-color:#ff4b4b; padding:25px; border-radius:12px; color:white; text-align:center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h1 style="margin:0;">High Risk Predicted: {prediction_score:.1f}</h1>
-                <p style="font-size:18px; margin-top:10px;">Confidence: {confidence} | Action: Mandatory Double Check & Peer Review</p>
-            </div>
-            ''', unsafe_allow_html=True)
-    elif prediction_score > 40:
-        st.markdown(f'''
-            <div style="background-color:#ffa500; padding:25px; border-radius:12px; color:white; text-align:center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h1 style="margin:0;">Medium Risk Predicted: {prediction_score:.1f}</h1>
-                <p style="font-size:18px; margin-top:10px;">Confidence: {confidence} | Action: Standard Regression Testing Required</p>
-            </div>
-            ''', unsafe_allow_html=True)
+    # --- 计算逻辑 ---
+    combined_key = f"{selected_project} | {selected_area}"
+    hist_val = risk_weights.get(combined_key, 0.2) * 100
+    final_score = (hist_val * 0.4) + (scope_score * 3) + (dev_exp * 3)
+
+    # --- 视觉呈现 ---
+    
+    # 醒目的红色/橙色/绿色大Banner
+    if final_score > 70:
+        st.markdown(f'<div class="risk-high">🚨 高风险预警 (Score: {final_score:.1f})</div>', unsafe_allow_html=True)
+    elif final_score > 40:
+        st.markdown(f'<div class="risk-medium">⚠️ 中等风险 (Score: {final_score:.1f})</div>', unsafe_allow_html=True)
     else:
-        st.markdown(f'''
-            <div style="background-color:#00c853; padding:25px; border-radius:12px; color:white; text-align:center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h1 style="margin:0;">Low Risk Predicted: {prediction_score:.1f}</h1>
-                <p style="font-size:18px; margin-top:10px;">Confidence: {confidence} | Action: Routine Checklist Verification</p>
-            </div>
-            ''', unsafe_allow_html=True)
+        st.markdown(f'<div class="risk-low">✅ 风险受控 (Score: {final_score:.1f})</div>', unsafe_allow_html=True)
 
-    # --- 5. 智能推荐清单 (精准展示项) ---
-    st.write("---")
-    st.subheader(f"💡 AI Recommended Actionable Checklist for {proj}")
-    
-    # 只匹配当前选中的项目和业务
-    matched_df = df[(df['project(app/web?)'] == proj) & (df['Bug area'] == area)]
-    
-    if not matched_df.empty:
-        checkpoints = matched_df['Checkpoint'].tolist()
-        for i, item in enumerate(checkpoints):
-            # 如果风险高，默认展开所有检查点以引起重视
-            with st.expander(f"Checkpoint {i+1}", expanded=(prediction_score > 70)):
-                st.write(item)
-                
-                # 智能 Tips：自动识别关键业务并提示神技
-                lower_item = item.lower()
-                if any(word in lower_item for word in ["money", "price", "balance", "pay", "amount", "余额", "支付", "金额"]):
-                    st.success("🛠 **AI Efficiency Tip:** Use 'Local Overrides' in DevTools to mock extreme responses (e.g., Insufficient Balance).")
-    else:
-        st.warning(f"No specific checkpoints found for {area} in {proj}. Please update the checklist database.")
+    col1, col2 = st.columns([1, 2])
+
+    with col1:
+        st.subheader("📊 风险构成分析")
+        stats_data = pd.DataFrame({
+            '维度': ['历史缺陷因素', '本次改动规模', '人员不确定性'],
+            '权重分值': [hist_val * 0.4, scope_score * 3, dev_exp * 3]
+        })
+        st.bar_chart(stats_data, x='维度', y='权重分值', color="#ff4b4b" if final_score > 70 else "#00c853")
+        
+        if final_score > 70:
+            st.warning("👉 **此任务必须触发 Double Check 机制！** 请联系 3 人专项小组进行交叉评审。")
+
+    with col2:
+        st.subheader(f"💡 {selected_project} | {selected_area} 专项避坑指南")
+        # 筛选 Checklist
+        matched_df = df[(df['project(app/web?)'] == selected_project) & (df['Bug area'] == selected_area)]
+        
+        if not matched_df.empty:
+            st.write(f"根据历史数据，请**优先核对**以下 {len(matched_df.head(10))} 项：")
+            for i, row in enumerate(matched_df['Checkpoint'].tolist()[:10]):
+                # 高风险时加重显示
+                if final_score > 70:
+                    st.error(f"**重点核查 {i+1}：** {row}")
+                else:
+                    st.info(f"**建议检查 {i+1}：** {row}")
+        else:
+            st.info("ℹ️ 该项目模块暂无特定历史 Bug 记录，请参考通用业务 Checklist。")
 
 except Exception as e:
-    st.error(f"Error initializing AI model: {e}")
+    st.error(f"❌ 运行出错了：{e}")
